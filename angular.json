@@ -130,5 +130,10 @@
       }
     }
   },
-  "defaultProject": "ankan17-github-io"
+  "defaultProject": "ankan17-github-io",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
