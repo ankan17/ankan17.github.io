@@ -1,0 +1,31 @@
+$small-desktop-breakpoint: 992px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 576px;
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+.container {
+
+  @media(min-width: $mobile-breakpoint) {
+    & {
+      max-width: 100%;
+    }
+  }
+
+  @media(min-width: $tablet-breakpoint) {
+    & {
+      max-width: 750px;
+    }
+  }
+
+  @media(min-width: $small-desktop-breakpoint) {
+    & {
+      max-width: 970px;
+    }
+  }
+
+  max-width: 1000px;
+}
