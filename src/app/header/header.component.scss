@@ -1,11 +1,4 @@
-/* Break points */
-$small-desktop-breakpoint: 992px;
-$tablet-breakpoint: 768px;
-$mobile-breakpoint: 576px;
-
-/* Colors */
-$theme-color: #038175;
-$white: #fff;
+@import '../../variables.scss';
 
 .header-image {
   height: 370px;
