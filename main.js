@@ -134,7 +134,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  <div class=\"header-image\"></div>\n  <div class=\"card-holder\">\n    <div class=\"container\">\n      <div class=\"card\">\n\n        <div class=\"profile\">\n          <img class=\"img-responsive d-none d-md-block\" src=\"../../assets/image1.jpg\" />\n          <img class=\"img-responsive d-md-none\" src=\"../../assets/image2.jpg\" />\n          <div class=\"slant\"></div>\n        </div>\n\n        <div class=\"card-content\">\n\n          <div class=\"basic-info\">\n            <h4 class=\"text-uppercase\">Ankan Poddar</h4>\n            <h6 class=\"text-capitalize\">Software Engineer &amp; Web Developer</h6>\n          </div>\n\n          <div class=\"contact-info\">\n            <ul class=\"profile-list\">\n              <li class=\"d-flex align-items-center\">\n                <span class=\"title\"><i class=\"fas fa-envelope\"></i></span>\n                <span class=\"content\">friendyankan@gmail.com</span>\n              </li>\n              <li class=\"d-flex align-items-center\">\n                <span class=\"title\"><i class=\"fas fa-globe\"></i></span>\n                <span class=\"content\">https://ankan17.github.io</span>\n              </li>\n              <li class=\"d-flex align-items-center\">\n                <span class=\"title\"><i class=\"fab fa-github\"></i></span>\n                <span class=\"content\">https://github.com/ankan17</span>\n              </li>\n              <li class=\"d-flex align-items-center\">\n                <span class=\"title\"><i class=\"fas fa-phone\"></i></span>\n                <span class=\"content\">+91 98045 17793</span>\n              </li>\n              <li class=\"d-flex align-items-center\">\n                <span class=\"title\"><i class=\"fas fa-map-marker-alt\"></i></span>\n                <span class=\"content\">C-35, Amarabati, Sodepur</span>\n              </li>\n            </ul>\n          </div>\n\n          <div class=\"contact-links\">\n            <a target=\"_blank\" href=\"https://www.facebook.com/friendyankan\" class=\"btn-floating indigo\">\n              <i class=\"fab fa-facebook-f\"></i>\n            </a>\n            <a target=\"_blank\" href=\"https://twitter.com/PoddarAnkan\" class=\"btn-floating blue\">\n              <i class=\"fab fa-twitter\"></i>\n            </a>\n            <a target=\"_blank\" href=\"https://plus.google.com/101331497280009937677\" class=\"btn-floating red\">\n              <i class=\"fab fa-google-plus-g\"></i>\n            </a>\n            <a target=\"_blank\" href=\"https://www.linkedin.com/in/ankan-poddar-86a6b6163\" class=\"btn-floating blue darken-3\">\n              <i class=\"fab fa-linkedin-in\"></i>\n            </a>\n            <a target=\"_blank\" href=\"https://github.com/ankan17\" class=\"btn-floating elegant-color\">\n              <i class=\"fab fa-github\"></i>\n            </a>\n          </div>\n\n        </div>  <!-- Card content -->\n\n      </div>  <!-- Card -->\n    </div>  <!-- Container -->\n  </div>  <!-- Card Holder -->\n</div>  <!-- Header -->\n"
+module.exports = "<header id=\"header\">\n  <div class=\"header-image\"></div>\n  <div class=\"card-holder\">\n    <div class=\"container\">\n      <div class=\"card\">\n\n        <div class=\"profile\">\n          <img class=\"img-responsive d-none d-md-block\" src=\"../../assets/image1.jpg\" />\n          <img class=\"img-responsive d-md-none\" src=\"../../assets/image2.jpg\" />\n          <div class=\"slant\"></div>\n        </div>\n\n        <div class=\"card-content\">\n          <div class=\"basic-info\">\n            <h4 class=\"text-uppercase\">{{ name }}</h4>\n            <h6 class=\"text-capitalize\">{{ position }}</h6>\n          </div>\n          <div class=\"contact-info\">\n            <ul class=\"profile-list\">\n              <li class=\"d-flex align-items-center\" *ngFor=\"let contact of contactInfo\">\n                <span class=\"title\"><i class=\"{{ contact.icon }}\"></i></span>\n                <span class=\"content\">{{ contact.text }}</span>\n              </li>\n            </ul>\n          </div>\n          <div class=\"contact-links\">\n            <a target=\"_blank\" *ngFor=\"let link of contactLinks\" href=\"{{ link.href }}\" class=\"{{ 'btn-floating ' + link.color }}\">\n              <i class=\"{{ link.icon }}\"></i>\n            </a>\n          </div>\n        </div>  <!-- Card content -->\n\n      </div>  <!-- Card -->\n    </div>  <!-- Container -->\n  </div>  <!-- Card Holder -->\n</header>  <!-- Header -->\n"
 
 /***/ }),
 
@@ -172,6 +172,22 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent() {
+        this.name = 'Ankan Poddar';
+        this.position = 'Software Engineer & Web Developer';
+        this.contactInfo = [
+            { icon: 'fas fa-envelope', text: 'friendyankan@gmail.com' },
+            { icon: 'fas fa-globe', text: 'https://ankan17.github.io' },
+            { icon: 'fab fa-github', text: 'https://github.com/ankan17' },
+            { icon: 'fas fa-phone', text: '+91 98045 17793' },
+            { icon: 'fas fa-map-marker-alt', text: 'C-35, Amarabati, Sodepur' }
+        ];
+        this.contactLinks = [
+            { icon: 'fab fa-facebook-f', href: 'https://www.facebook.com/friendyankan', color: 'indigo' },
+            { icon: 'fab fa-twitter', href: 'https://twitter.com/PoddarAnkan', color: 'blue' },
+            { icon: 'fab fa-google-plus-g', href: 'https://plus.google.com/101331497280009937677', color: 'red' },
+            { icon: 'fab fa-linkedin-in', href: 'https://www.linkedin.com/in/ankan-poddar-86a6b6163', color: 'blue darken-3' },
+            { icon: 'fab fa-github', href: 'https://github.com/ankan17', color: 'elegant-color' }
+        ];
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };

@@ -89,7 +89,7 @@ module.exports = "body,h1,h2,h3,h4,h5,h6{font-weight:300}.view,.view .mask,.wave
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\n  font-family: 'Raleway', sans-serif;\n  font-size: 15px; }\n\n.container {\n  max-width: 1000px; }\n\n@media (min-width: 576px) {\n    .container {\n      max-width: 100%; } }\n\n@media (min-width: 768px) {\n    .container {\n      max-width: 750px; } }\n\n@media (min-width: 992px) {\n    .container {\n      max-width: 970px; } }\n"
+module.exports = "/* Break points */\n/* Colors */\nbody {\n  font-family: 'Raleway', sans-serif;\n  font-size: 15px; }\n.container {\n  max-width: 1000px; }\n@media (min-width: 576px) {\n    .container {\n      max-width: 100%; } }\n@media (min-width: 768px) {\n    .container {\n      max-width: 750px; } }\n@media (min-width: 992px) {\n    .container {\n      max-width: 970px; } }\n"
 
 /***/ }),
 
