@@ -1,6 +1,7 @@
 @import '../../variables.scss';
 
 .header-image {
+  position: absolute;
   height: 370px;
   width: 100%;
   background: url('../../assets/background.jpg') no-repeat fixed center center;
@@ -8,9 +9,10 @@
 }
 
 .card-holder {
-  transform: translateY(-212px);
+  position: relative;
+  top: 158px;
   @media(max-width: $tablet-breakpoint) {
-    transform: translateY(-178px);
+    top: 124px;
   }
 
   .card {
