@@ -68,7 +68,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AboutComponent = /** @class */ (function () {
     function AboutComponent() {
-        this.about = 'Hello! I’m Ankan Poddar, a software developer by passion and well-versed with web-development too. Experienced with development of open-source projects, unit testing and continuous integration, I have good knowledge of technologies like HTML5/CSS3, SASS, JavaScript, JQuery, Angular JS, ReactJS, Vue.js, Python, Flask, Django and git.';
+        this.about = "Hello! I\u2019m Ankan Poddar, a software developer by passion and well-versed with web-development too.\n    Experienced with development of open-source projects, unit testing and continuous integration, I have good\n    knowledge of technologies like HTML5/CSS3, SASS, JavaScript, JQuery, Angular JS, ReactJS, Vue.js, Python,\n    Flask, Django and git.";
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
