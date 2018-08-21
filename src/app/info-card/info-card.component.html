@@ -1,0 +1,33 @@
+<div class="card-holder">
+  <div class="container">
+    <div class="card">
+
+      <div class="profile">
+        <img class="img-responsive d-none d-md-block" src="../../assets/image1.jpg" />
+        <img class="img-responsive d-md-none" src="../../assets/image2.jpg" />
+        <div class="slant"></div>
+      </div>
+
+      <div class="card-content">
+        <div class="basic-info">
+          <h4 class="text-uppercase">{{ name }}</h4>
+          <h6 class="text-capitalize">{{ position }}</h6>
+        </div>
+        <div class="contact-info">
+          <ul class="profile-list">
+            <li class="d-flex align-items-center" *ngFor="let contact of contactInfo">
+              <span class="title"><i class="{{ contact.icon }}"></i></span>
+              <span class="content">{{ contact.text }}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-links">
+          <a target="_blank" *ngFor="let link of contactLinks" href="{{ link.href }}" class="{{ 'btn-floating ' + link.color }}">
+            <i class="{{ link.icon }}"></i>
+          </a>
+        </div>
+      </div>  <!-- Card content -->
+
+    </div>  <!-- Card -->
+  </div>  <!-- Container -->
+</div>  <!-- Card Holder -->
