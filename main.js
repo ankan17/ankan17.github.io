@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card-holder\">\n  <div class=\"container\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">{{ about }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a href=\"#\" class=\"btn waves-effect\">Download CV</a>\n        <a href=\"#\" class=\"btn waves-effect\">Contact Me</a>\n      </div>\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
+module.exports = "<div\n  data-aos=\"fade-up\"\n  data-aos-duration=\"1500\"\n  data-aos-delay=\"500\"\n  data-aos-offset=\"50\"\n  data-aos-once=\"true\"\n  class=\"card-holder\"\n>\n  <div class=\"container\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">{{ about }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a href=\"#\" class=\"btn waves-effect\">Download CV</a>\n        <a href=\"#\" class=\"btn waves-effect\">Contact Me</a>\n      </div>\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
 
 /***/ }),
 
@@ -201,7 +201,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card-holder\">\n  <div class=\"container\">\n    <div class=\"card\">\n\n      <div class=\"profile\">\n        <img class=\"img-responsive d-none d-md-block\" src=\"../../assets/image1.jpg\" />\n        <img class=\"img-responsive d-md-none\" src=\"../../assets/image2.jpg\" />\n        <div class=\"slant\"></div>\n      </div>\n\n      <div class=\"card-content\">\n        <div class=\"basic-info\">\n          <h4 class=\"text-uppercase\">{{ name }}</h4>\n          <h6 class=\"text-capitalize\">{{ position }}</h6>\n        </div>\n        <div class=\"contact-info\">\n          <ul class=\"profile-list\">\n            <li class=\"d-flex align-items-center\" *ngFor=\"let contact of contactInfo\">\n              <span class=\"title\"><i class=\"{{ contact.icon }}\"></i></span>\n              <span class=\"content\">{{ contact.text }}</span>\n            </li>\n          </ul>\n        </div>\n        <div class=\"contact-links\">\n          <a target=\"_blank\" *ngFor=\"let link of contactLinks\" href=\"{{ link.href }}\" class=\"{{ 'btn-floating ' + link.color }}\">\n            <i class=\"{{ link.icon }}\"></i>\n          </a>\n        </div>\n      </div>  <!-- Card content -->\n\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
+module.exports = "<div data-aos=\"fade-up\" data-aos-once=\"true\" data-aos-duration=\"1500\" class=\"card-holder\">\n  <div class=\"container\">\n    <div class=\"card\">\n\n      <div class=\"profile\">\n        <img class=\"img-responsive d-none d-md-block\" src=\"../../assets/image1.jpg\" />\n        <img class=\"img-responsive d-md-none\" src=\"../../assets/image2.jpg\" />\n        <div class=\"slant\"></div>\n      </div>\n\n      <div class=\"card-content\">\n        <div class=\"basic-info\">\n          <h4 class=\"text-uppercase\">{{ name }}</h4>\n          <h6 class=\"text-capitalize\">{{ position }}</h6>\n        </div>\n        <div class=\"contact-info\">\n          <ul class=\"profile-list\">\n            <li class=\"d-flex align-items-center\" *ngFor=\"let contact of contactInfo\">\n              <span class=\"title\"><i class=\"{{ contact.icon }}\"></i></span>\n              <span class=\"content\">{{ contact.text }}</span>\n            </li>\n          </ul>\n        </div>\n        <div class=\"contact-links\">\n          <a target=\"_blank\" *ngFor=\"let link of contactLinks\" href=\"{{ link.href }}\" class=\"{{ 'btn-floating ' + link.color }}\">\n            <i class=\"{{ link.icon }}\"></i>\n          </a>\n        </div>\n      </div>  <!-- Card content -->\n\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
 
 /***/ }),
 
@@ -313,6 +313,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -322,6 +325,7 @@ if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].produc
 }
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
     .catch(function (err) { return console.log(err); });
+aos__WEBPACK_IMPORTED_MODULE_4___default.a.init();
 
 
 /***/ }),
