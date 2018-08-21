@@ -4,6 +4,10 @@
   position: relative;
   top: 208px;
 
+  @media(max-width: $tablet-breakpoint) {
+    top: 162px;
+  }
+
   .card {
     border-radius: 0;
 
