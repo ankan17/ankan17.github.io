@@ -1,0 +1,22 @@
+<div class="container">
+  <h4 class="text-uppercase text-center section-header">
+    <i class="fas fa-book" data-aos="fade-up" data-aos-duration="800"></i>Education
+  </h4>
+  <div class="education-timeline">
+    <div class="timeline-block" *ngFor="let block of blocks">
+      <div class="timeline-dot">
+        <h6>{{ block.dot }}</h6>
+      </div>
+      <div class="card timeline-content" data-aos="fade-up">
+        <div class="card-content">
+          <h6 class="timeline-title">{{ block.name }}</h6>
+          <div class="timeline-info">
+            <h6>{{ block.institute }}</h6>
+            <h6>{{ block.duration }}</h6>
+          </div>
+          <p>{{ block.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
