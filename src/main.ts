@@ -13,4 +13,9 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
 
-AOS.init();
+AOS.init({
+  once: true,
+  duration: 1100,
+  offset: -20,
+  easing: 'ease-in-out-cubic'
+});
