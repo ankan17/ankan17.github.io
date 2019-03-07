@@ -17,7 +17,8 @@
           <ul class="profile-list">
             <li class="d-flex align-items-center" *ngFor="let contact of contactInfo">
               <span class="title"><i class="{{ contact.icon }}"></i></span>
-              <span class="content">{{ contact.text }}</span>
+              <a *ngIf="linkIsNull(contact.link); else spanblock" href="{{ contact.link }}" class="content">{{ contact.text }}</a>
+              <ng-template #spanblock><span class="content">{{ contact.text }}</span></ng-template>
             </li>
           </ul>
         </div>

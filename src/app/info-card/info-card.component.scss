@@ -2,9 +2,10 @@
 
 .card-holder {
   position: relative;
-  top: 158px;
+  top: 160px;
+  margin-bottom: 210px;
   @media(max-width: $tablet-breakpoint) {
-    top: 124px;
+    top: 120px;
   }
 
   .card {
@@ -111,6 +112,8 @@
             .content {
               font-size: 14px;
               font-weight: 500;
+              color: #e6e6e6;
+              text-decoration: none;
             }
           }
         }
