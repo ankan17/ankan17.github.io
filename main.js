@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div data-aos=\"fade-up\" data-aos-delay=\"500\" data-aos-offset=\"50\" class=\"card-holder\">\n  <div class=\"container\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">{{ about }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a href=\"#\" class=\"btn waves-effect\">Download CV</a>\n        <a href=\"#\" class=\"btn waves-effect\">Contact Me</a>\n      </div>\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
+module.exports = "<div data-aos=\"fade-up\" data-aos-delay=\"500\" data-aos-offset=\"50\" class=\"card-holder\">\n  <div class=\"container\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <p class=\"card-text\">{{ about }}</p>\n      </div>\n      <div class=\"card-action\">\n        <a href=\"../../assets/ankan_resume.pdf\" class=\"btn waves-effect\">Download Résumé</a>\n      </div>\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div data-aos=\"fade-up\" data-aos-delay=\"500\" data-aos-offs
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* Break points */\n/* Colors */\n.card-holder {\n  position: relative;\n  top: 208px; }\n@media (max-width: 768px) {\n    .card-holder {\n      top: 162px; } }\n.card-holder .card {\n    border-radius: 0; }\n.card-holder .card .card-body {\n      padding: 0; }\n.card-holder .card .card-body .card-text {\n        padding: 40px;\n        border-bottom: 1px solid rgba(160, 160, 160, 0.2);\n        color: #616161;\n        font-size: 0.98rem;\n        text-align: center; }\n.card-holder .card .card-action {\n      padding: 20px;\n      text-align: center; }\n.card-holder .card .card-action a.btn {\n        margin: 7px 7px;\n        background: #038175;\n        color: #fff;\n        width: 180px;\n        border-radius: 2px;\n        font-size: 14px; }\n"
+module.exports = "/* Break points */\n/* Colors */\n.card-holder {\n  position: relative;\n  margin-bottom: 70px; }\n@media (max-width: 768px) {\n    .card-holder {\n      top: 162px; } }\n.card-holder .card {\n    border-radius: 0; }\n.card-holder .card .card-body {\n      padding: 0; }\n.card-holder .card .card-body .card-text {\n        padding: 40px;\n        border-bottom: 1px solid rgba(160, 160, 160, 0.2);\n        color: #616161;\n        font-size: 0.98rem;\n        text-align: center; }\n.card-holder .card .card-action {\n      padding: 20px;\n      text-align: center; }\n.card-holder .card .card-action a.btn {\n        margin: 7px 7px;\n        background: #038175;\n        color: #FFF;\n        width: 180px;\n        border-radius: 2px;\n        font-size: 14px; }\n"
 
 /***/ }),
 
@@ -68,7 +68,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AboutComponent = /** @class */ (function () {
     function AboutComponent() {
-        this.about = "Hello! I\u2019m Ankan Poddar, a software developer by passion and well-versed with web-development too.\n    Experienced with development of open-source projects, unit testing and continuous integration, I have good\n    knowledge of technologies like HTML5/CSS3, SASS, JavaScript, JQuery, Angular JS, ReactJS, Vue.js, Python,\n    Flask, Django and git.";
+        this.about = "Hello! I\u2019m Ankan Poddar, a Computer Science student at NIT Durgapur and\n    a software and web developer by passion. Experienced with open-source development,\n    I have a good knowledge of Python and JavaScript. I also dabble in C/C++";
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
@@ -94,7 +94,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <header id=\"header\">\n    <div class=\"header-image\"></div>\n  </header>\n  <app-info-card></app-info-card>\n  <app-about></app-about>\n  <app-education></app-education>\n</div>\n"
+module.exports = "<div>\n  <header id=\"header\">\n    <div class=\"header-image\"></div>\n  </header>\n  <app-info-card></app-info-card>\n  <app-about></app-about>\n  <app-education></app-education>\n  <app-skills></app-skills>\n</div>\n"
 
 /***/ }),
 
@@ -160,12 +160,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _info_card_info_card_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./info-card/info-card.component */ "./src/app/info-card/info-card.component.ts");
 /* harmony import */ var _education_education_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./education/education.component */ "./src/app/education/education.component.ts");
+/* harmony import */ var _skills_skills_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./skills/skills.component */ "./src/app/skills/skills.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -181,7 +183,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
                 _about_about_component__WEBPACK_IMPORTED_MODULE_3__["AboutComponent"],
                 _info_card_info_card_component__WEBPACK_IMPORTED_MODULE_4__["InfoCardComponent"],
-                _education_education_component__WEBPACK_IMPORTED_MODULE_5__["EducationComponent"]
+                _education_education_component__WEBPACK_IMPORTED_MODULE_5__["EducationComponent"],
+                _skills_skills_component__WEBPACK_IMPORTED_MODULE_6__["SkillsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
@@ -204,7 +207,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-center section-header\">\n    <i class=\"fas fa-book\" data-aos=\"fade-up\" data-aos-duration=\"800\"></i>Education\n  </h4>\n  <div class=\"education-timeline\">\n    <div class=\"timeline-block\" *ngFor=\"let block of blocks\">\n      <div class=\"timeline-dot\">\n        <h6>{{ block.dot }}</h6>\n      </div>\n      <div class=\"card timeline-content\" data-aos=\"fade-up\">\n        <div class=\"card-content\">\n          <h6 class=\"timeline-title\">{{ block.name }}</h6>\n          <div class=\"timeline-info\">\n            <h6>{{ block.institute }}</h6>\n            <h6>{{ block.duration }}</h6>\n          </div>\n          <p>{{ block.description }}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-center section-header\">\n    <img src=\"../../assets/education.png\" data-aos=\"fade-up\" data-aos-duration=\"500\" />\n    Education\n  </h4>\n  <div class=\"education-timeline\">\n    <div class=\"timeline-block\" *ngFor=\"let block of blocks\">\n      <div class=\"timeline-dot\">\n        <h6>{{ block.dot }}</h6>\n      </div>\n      <div class=\"card timeline-content\" data-aos=\"fade-up\">\n        <div class=\"card-content\">\n          <h6 class=\"timeline-title\">{{ block.name }}</h6>\n          <div class=\"timeline-info\">\n            <h6>{{ block.institute }}</h6>\n            <h6>{{ block.duration }}</h6>\n          </div>\n          <p>{{ block.description }}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -215,7 +218,7 @@ module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* Break points */\n/* Colors */\n.container {\n  position: relative;\n  top: 282px;\n  margin-bottom: 20px; }\n.container .section-header {\n    font-weight: 600;\n    font-size: 33px;\n    margin: 1.14rem 0 0.912rem 0; }\n.container .section-header i {\n      width: 66px;\n      height: 66px;\n      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n      margin: -2px 12px 12px 12px;\n      color: #0c8599;\n      font-size: 42px;\n      line-height: 66px; }\n.container .education-timeline::before {\n    content: '';\n    position: absolute;\n    top: 100px;\n    left: 50%;\n    margin-left: -2px;\n    height: 57.1%;\n    width: 4px;\n    opacity: 0.3;\n    background: #038175; }\n@media (max-width: 768px) {\n      .container .education-timeline::before {\n        height: 77.1%; } }\n.container .education-timeline .timeline-block {\n    overflow: hidden; }\n.container .education-timeline .timeline-block:not(:first-child) {\n      margin: 0.5em 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block:not(:first-child) {\n          margin: -6em 0; } }\n.container .education-timeline .timeline-block .timeline-dot {\n      position: absolute;\n      left: 50%;\n      width: 50px;\n      height: 50px;\n      z-index: 2;\n      margin-left: -25px;\n      background: #038175;\n      border-radius: 100%;\n      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n      color: #fff;\n      text-align: center; }\n@media (max-width: 768px) {\n        .container .education-timeline .timeline-block .timeline-dot {\n          left: auto;\n          right: 4%;\n          margin-top: 5px; } }\n.container .education-timeline .timeline-block .timeline-dot h6 {\n        padding: 0;\n        font-size: 30px;\n        font-weight: bold;\n        line-height: 50px;\n        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29); }\n.container .education-timeline .timeline-block .card {\n      margin: 0;\n      border-radius: 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block .card {\n          width: 44%; } }\n.container .education-timeline .timeline-block .card .card-content {\n        padding: 20px;\n        border-radius: 0 0 2px 2px; }\n.container .education-timeline .timeline-block .timeline-content {\n      position: relative;\n      background: #fff;\n      margin-right: 0;\n      z-index: 1;\n      margin-bottom: 5px;\n      border-left: 5px solid #9C27B0; }\n.container .education-timeline .timeline-block .timeline-content .timeline-title {\n        max-width: 100%;\n        font-size: 21px;\n        margin: 10px 0 20px; }\n.container .education-timeline .timeline-block .timeline-content .timeline-info h6 {\n        font-size: 17px;\n        line-height: 15px;\n        margin: 10px 0; }\n.container .education-timeline .timeline-block .timeline-content p {\n        margin-top: 20px;\n        font-size: 15px; }\n.container .education-timeline .timeline-block .timeline-content::before {\n        content: '';\n        width: 58px;\n        height: 4px;\n        position: absolute;\n        top: 26px;\n        left: 100%;\n        z-index: -2;\n        opacity: 0.3;\n        background: #038175; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content {\n      float: right; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content::before {\n        top: 25px;\n        left: auto;\n        right: 101.2%;\n        z-index: -2; }\n"
+module.exports = "/* Break points */\n/* Colors */\n.container {\n  position: relative;\n  margin-bottom: 150px; }\n.container .education-timeline::before {\n    content: '';\n    position: absolute;\n    top: 100px;\n    left: 50%;\n    margin-left: -2px;\n    height: 57.1%;\n    width: 4px;\n    opacity: 0.3;\n    background: #038175; }\n@media (max-width: 768px) {\n      .container .education-timeline::before {\n        height: 77.1%; } }\n.container .education-timeline .timeline-block {\n    overflow: hidden; }\n.container .education-timeline .timeline-block:not(:first-child) {\n      margin: 0.5em 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block:not(:first-child) {\n          margin: -6em 0; } }\n.container .education-timeline .timeline-block .timeline-dot {\n      position: absolute;\n      left: 50%;\n      width: 50px;\n      height: 50px;\n      z-index: 2;\n      margin-left: -25px;\n      background: #038175;\n      border-radius: 100%;\n      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n      color: #FFF;\n      text-align: center; }\n@media (max-width: 768px) {\n        .container .education-timeline .timeline-block .timeline-dot {\n          left: auto;\n          right: 4%;\n          margin-top: 5px; } }\n.container .education-timeline .timeline-block .timeline-dot h6 {\n        padding: 0;\n        font-size: 30px;\n        font-weight: bold;\n        line-height: 50px;\n        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29); }\n.container .education-timeline .timeline-block .card {\n      margin: 0;\n      border-radius: 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block .card {\n          width: 44%; } }\n.container .education-timeline .timeline-block .card .card-content {\n        padding: 20px;\n        border-radius: 0 0 2px 2px; }\n.container .education-timeline .timeline-block .timeline-content {\n      position: relative;\n      background: #fff;\n      margin-right: 0;\n      z-index: 1;\n      margin-bottom: 5px;\n      border-left: 5px solid #9C27B0; }\n.container .education-timeline .timeline-block .timeline-content .timeline-title {\n        max-width: 100%;\n        font-size: 21px;\n        margin: 10px 0 20px; }\n.container .education-timeline .timeline-block .timeline-content .timeline-info h6 {\n        font-size: 17px;\n        line-height: 15px;\n        margin: 10px 0; }\n.container .education-timeline .timeline-block .timeline-content p {\n        margin-top: 20px;\n        font-size: 15px; }\n.container .education-timeline .timeline-block .timeline-content::before {\n        content: '';\n        width: 58px;\n        height: 4px;\n        position: absolute;\n        top: 26px;\n        left: 100%;\n        z-index: -2;\n        opacity: 0.3;\n        background: #038175; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content {\n      float: right; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content::before {\n        top: 25px;\n        left: auto;\n        right: 101.2%;\n        z-index: -2; }\n"
 
 /***/ }),
 
@@ -290,7 +293,7 @@ var EducationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div data-aos=\"zoom-in-up\" class=\"card-holder\">\n  <div class=\"container\">\n    <div class=\"card\">\n\n      <div class=\"profile\">\n        <img class=\"img-responsive d-none d-md-block\" src=\"../../assets/image1.jpg\" />\n        <img class=\"img-responsive d-md-none\" src=\"../../assets/image2.jpg\" />\n        <div class=\"slant\"></div>\n      </div>\n\n      <div class=\"card-content\">\n        <div class=\"basic-info\">\n          <h4 class=\"text-uppercase\">{{ name }}</h4>\n          <h6 class=\"text-capitalize\">{{ position }}</h6>\n        </div>\n        <div class=\"contact-info\">\n          <ul class=\"profile-list\">\n            <li class=\"d-flex align-items-center\" *ngFor=\"let contact of contactInfo\">\n              <span class=\"title\"><i class=\"{{ contact.icon }}\"></i></span>\n              <span class=\"content\">{{ contact.text }}</span>\n            </li>\n          </ul>\n        </div>\n        <div class=\"contact-links\">\n          <a target=\"_blank\" *ngFor=\"let link of contactLinks\" href=\"{{ link.href }}\" class=\"{{ 'btn-floating ' + link.color }}\">\n            <i class=\"{{ link.icon }}\"></i>\n          </a>\n        </div>\n      </div>  <!-- Card content -->\n\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
+module.exports = "<div data-aos=\"zoom-in-up\" class=\"card-holder\">\n  <div class=\"container\">\n    <div class=\"card\">\n\n      <div class=\"profile\">\n        <img class=\"img-responsive d-none d-md-block\" src=\"../../assets/image1.jpg\" />\n        <img class=\"img-responsive d-md-none\" src=\"../../assets/image2.jpg\" />\n        <div class=\"slant\"></div>\n      </div>\n\n      <div class=\"card-content\">\n        <div class=\"basic-info\">\n          <h4 class=\"text-uppercase\">{{ name }}</h4>\n          <h6 class=\"text-capitalize\">{{ position }}</h6>\n        </div>\n        <div class=\"contact-info\">\n          <ul class=\"profile-list\">\n            <li class=\"d-flex align-items-center\" *ngFor=\"let contact of contactInfo\">\n              <span class=\"title\"><i class=\"{{ contact.icon }}\"></i></span>\n              <a *ngIf=\"linkIsNull(contact.link); else spanblock\" href=\"{{ contact.link }}\" class=\"content\">{{ contact.text }}</a>\n              <ng-template #spanblock><span class=\"content\">{{ contact.text }}</span></ng-template>\n            </li>\n          </ul>\n        </div>\n        <div class=\"contact-links\">\n          <a target=\"_blank\" *ngFor=\"let link of contactLinks\" href=\"{{ link.href }}\" class=\"{{ 'btn-floating ' + link.color }}\">\n            <i class=\"{{ link.icon }}\"></i>\n          </a>\n        </div>\n      </div>  <!-- Card content -->\n\n    </div>  <!-- Card -->\n  </div>  <!-- Container -->\n</div>  <!-- Card Holder -->\n"
 
 /***/ }),
 
@@ -301,7 +304,7 @@ module.exports = "<div data-aos=\"zoom-in-up\" class=\"card-holder\">\n  <div cl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* Break points */\n/* Colors */\n.card-holder {\n  position: relative;\n  top: 158px; }\n@media (max-width: 768px) {\n    .card-holder {\n      top: 124px; } }\n.card-holder .card {\n    height: 400px;\n    background-color: #038175;\n    border-radius: 0 0 2px 2px;\n    overflow: hidden; }\n@media (max-width: 768px) {\n      .card-holder .card {\n        overflow: visible; } }\n.card-holder .card .profile {\n      position: absolute;\n      right: 0; }\n@media (max-width: 768px) {\n        .card-holder .card .profile {\n          left: 0;\n          bottom: 85%;\n          width: 150px;\n          margin-left: auto;\n          margin-right: auto; } }\n.card-holder .card .profile img {\n        width: 400px; }\n@media (max-width: 992px) {\n          .card-holder .card .profile img {\n            max-width: 360px; } }\n@media (max-width: 768px) {\n          .card-holder .card .profile img {\n            height: 150px;\n            width: 150px;\n            border-radius: 50%;\n            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 14px 0 rgba(0, 0, 0, 0.16); } }\n.card-holder .card .profile .slant {\n        position: absolute;\n        top: 0;\n        z-index: 1;\n        border-style: solid;\n        border-width: 400px 0 0 100px;\n        border-color: rgba(223, 50, 50, 0) transparent transparent #038175; }\n@media (max-width: 768px) {\n          .card-holder .card .profile .slant {\n            display: none; } }\n.card-holder .card .card-content {\n      padding: 40px;\n      border-radius: 0 0 2px 2px;\n      color: #fff; }\n.card-holder .card .card-content .basic-info {\n        max-width: 514px; }\n@media (max-width: 992px) {\n          .card-holder .card .card-content .basic-info {\n            max-width: 300px; } }\n@media (max-width: 768px) {\n          .card-holder .card .card-content .basic-info {\n            max-width: 100%;\n            text-align: center;\n            margin-top: 30px; } }\n.card-holder .card .card-content .basic-info h4 {\n          font-weight: 700;\n          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);\n          font-size: 32px;\n          line-height: 110%;\n          margin: 1.15rem 0 0.912rem 0; }\n.card-holder .card .card-content .basic-info h6 {\n          font-weight: 300;\n          margin-top: -10px;\n          margin-bottom: 18px;\n          font-size: 1.2em;\n          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29); }\n@media (max-width: 768px) {\n        .card-holder .card .card-content .contact-info {\n          display: table;\n          margin: 0 auto;\n          max-width: 100%;\n          padding: 0; } }\n.card-holder .card .card-content .contact-info .profile-list {\n        list-style: none;\n        padding-left: 0;\n        margin-bottom: 18px; }\n.card-holder .card .card-content .contact-info .profile-list li {\n          line-height: 30px; }\n.card-holder .card .card-content .contact-info .profile-list li .title {\n            font-size: 21px;\n            margin-right: 12px; }\n.card-holder .card .card-content .contact-info .profile-list li .content {\n            font-size: 14px;\n            font-weight: 500; }\n@media (max-width: 768px) {\n        .card-holder .card .card-content .contact-links {\n          display: table;\n          margin: 0 auto 9px;\n          max-width: 100%;\n          padding: 0; } }\n.card-holder .card .card-content .contact-links .btn-floating {\n        width: 37px;\n        height: 37px;\n        padding: 0;\n        border-radius: 50%;\n        transition: all .3s;\n        cursor: pointer;\n        display: inline-flex;\n        align-items: center;\n        justify-content: center;\n        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n        text-decoration: none;\n        margin-left: 16px;\n        margin-bottom: 4px;\n        z-index: 0 !important; }\n.card-holder .card .card-content .contact-links .btn-floating:first-child {\n          margin-left: 0; }\n.card-holder .card .card-content .contact-links .btn-floating:hover {\n          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }\n.card-holder .card .card-content .contact-links .btn-floating i {\n          color: #fff;\n          font-size: 15px; }\n"
+module.exports = "/* Break points */\n/* Colors */\n.card-holder {\n  position: relative;\n  top: 160px;\n  margin-bottom: 210px; }\n@media (max-width: 768px) {\n    .card-holder {\n      top: 120px; } }\n.card-holder .card {\n    height: 400px;\n    background-color: #038175;\n    border-radius: 0 0 2px 2px;\n    overflow: hidden; }\n@media (max-width: 768px) {\n      .card-holder .card {\n        overflow: visible; } }\n.card-holder .card .profile {\n      position: absolute;\n      right: 0; }\n@media (max-width: 768px) {\n        .card-holder .card .profile {\n          left: 0;\n          bottom: 85%;\n          width: 150px;\n          margin-left: auto;\n          margin-right: auto; } }\n.card-holder .card .profile img {\n        width: 400px; }\n@media (max-width: 992px) {\n          .card-holder .card .profile img {\n            max-width: 360px; } }\n@media (max-width: 768px) {\n          .card-holder .card .profile img {\n            height: 150px;\n            width: 150px;\n            border-radius: 50%;\n            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 14px 0 rgba(0, 0, 0, 0.16); } }\n.card-holder .card .profile .slant {\n        position: absolute;\n        top: 0;\n        z-index: 1;\n        border-style: solid;\n        border-width: 400px 0 0 100px;\n        border-color: rgba(223, 50, 50, 0) transparent transparent #038175; }\n@media (max-width: 768px) {\n          .card-holder .card .profile .slant {\n            display: none; } }\n.card-holder .card .card-content {\n      padding: 40px;\n      border-radius: 0 0 2px 2px;\n      color: #FFF; }\n.card-holder .card .card-content .basic-info {\n        max-width: 514px; }\n@media (max-width: 992px) {\n          .card-holder .card .card-content .basic-info {\n            max-width: 300px; } }\n@media (max-width: 768px) {\n          .card-holder .card .card-content .basic-info {\n            max-width: 100%;\n            text-align: center;\n            margin-top: 30px; } }\n.card-holder .card .card-content .basic-info h4 {\n          font-weight: 700;\n          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);\n          font-size: 32px;\n          line-height: 110%;\n          margin: 1.15rem 0 0.912rem 0; }\n.card-holder .card .card-content .basic-info h6 {\n          font-weight: 300;\n          margin-top: -10px;\n          margin-bottom: 18px;\n          font-size: 1.2em;\n          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29); }\n@media (max-width: 768px) {\n        .card-holder .card .card-content .contact-info {\n          display: table;\n          margin: 0 auto;\n          max-width: 100%;\n          padding: 0; } }\n.card-holder .card .card-content .contact-info .profile-list {\n        list-style: none;\n        padding-left: 0;\n        margin-bottom: 18px; }\n.card-holder .card .card-content .contact-info .profile-list li {\n          line-height: 30px; }\n.card-holder .card .card-content .contact-info .profile-list li .title {\n            font-size: 21px;\n            margin-right: 12px; }\n.card-holder .card .card-content .contact-info .profile-list li .content {\n            font-size: 14px;\n            font-weight: 500;\n            color: #e6e6e6;\n            text-decoration: none; }\n@media (max-width: 768px) {\n        .card-holder .card .card-content .contact-links {\n          display: table;\n          margin: 0 auto 9px;\n          max-width: 100%;\n          padding: 0; } }\n.card-holder .card .card-content .contact-links .btn-floating {\n        width: 37px;\n        height: 37px;\n        padding: 0;\n        border-radius: 50%;\n        transition: all .3s;\n        cursor: pointer;\n        display: inline-flex;\n        align-items: center;\n        justify-content: center;\n        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n        text-decoration: none;\n        margin-left: 16px;\n        margin-bottom: 4px;\n        z-index: 0 !important; }\n.card-holder .card .card-content .contact-links .btn-floating:first-child {\n          margin-left: 0; }\n.card-holder .card .card-content .contact-links .btn-floating:hover {\n          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }\n.card-holder .card .card-content .contact-links .btn-floating i {\n          color: #fff;\n          font-size: 15px; }\n"
 
 /***/ }),
 
@@ -329,23 +332,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var InfoCardComponent = /** @class */ (function () {
     function InfoCardComponent() {
         this.name = 'Ankan Poddar';
-        this.position = 'Software Engineer & Web Developer';
+        this.position = 'Web Developer & Open-source enthusiast';
         this.contactInfo = [
-            { icon: 'fas fa-envelope', text: 'friendyankan@gmail.com' },
-            { icon: 'fas fa-globe', text: 'https://ankan17.github.io' },
-            { icon: 'fab fa-github', text: 'https://github.com/ankan17' },
-            { icon: 'fas fa-phone', text: '+91 98045 17793' },
-            { icon: 'fas fa-map-marker-alt', text: 'C-35, Amarabati, Sodepur' }
+            { icon: 'fas fa-envelope', text: 'apoddar17@gmail.com', link: 'mailto:apoddar17@gmail.com' },
+            { icon: 'fas fa-globe', text: 'https://ankan17.github.io', link: 'https://ankan17.github.io' },
+            { icon: 'fas fa-phone', text: '+91 98045 17793', link: null },
+            { icon: 'fas fa-map-marker-alt', text: 'C-35, Amarabati, Sodepur', link: null }
         ];
         this.contactLinks = [
-            { icon: 'fab fa-facebook-f', href: 'https://www.facebook.com/friendyankan', color: 'indigo' },
+            { icon: 'fab fa-facebook-f', href: 'https://www.facebook.com/ankan17', color: 'indigo' },
             { icon: 'fab fa-twitter', href: 'https://twitter.com/PoddarAnkan', color: 'blue' },
-            { icon: 'fab fa-google-plus-g', href: 'https://plus.google.com/101331497280009937677', color: 'red' },
             { icon: 'fab fa-linkedin-in', href: 'https://www.linkedin.com/in/ankan-poddar-86a6b6163', color: 'blue darken-3' },
             { icon: 'fab fa-github', href: 'https://github.com/ankan17', color: 'elegant-color' }
         ];
     }
     InfoCardComponent.prototype.ngOnInit = function () {
+    };
+    InfoCardComponent.prototype.linkIsNull = function (link) {
+        return (link != null);
     };
     InfoCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -356,6 +360,123 @@ var InfoCardComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], InfoCardComponent);
     return InfoCardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/skills/skills.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/skills/skills.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-center section-header\">\n    <img src=\"../../assets/skills.png\" data-aos=\"fade-up\" data-aos-duration=\"500\" />\n    Skills\n  </h4>\n  <div id=\"skills-card\" class=\"card\" data-sr-id=\"15\" style=\"; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 1.1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1.1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; \">\n    <div class=\"card-content\">\n      <div class=\"row\">\n        <div *ngFor=\"let skillgroup of skillsInfo\" class=\"col-md-4 col-sm-4 col-xs-12\">\n          <div class=\"skills-title\">\n            <h6 class=\"text-center\">{{ skillgroup.title }}</h6>\n          </div>\n          <div *ngFor=\"let skill of skillgroup.skills\" class=\"skillbar\">\n            <div class=\"skillbar-title\"><span>{{ skill.name }}</span></div>\n            <div class=\"skillbar-bar\" [style.width]=\"skill.percent*10 + '%'\"></div>\n            <div class=\"skill-bar-percent\">{{ skill.percent }}</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/skills/skills.component.scss":
+/*!**********************************************!*\
+  !*** ./src/app/skills/skills.component.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* Break points */\n/* Colors */\n.container {\n  margin-bottom: 50px; }\n.container .card {\n    background: #0C8599; }\n.container .card .card-content {\n      padding: 40px;\n      border-radius: 0 0 2px 2px; }\n.container .card .card-content .skills-title {\n        margin: 15px 0; }\n.container .card .card-content .skills-title h6 {\n          color: #FFF;\n          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);\n          font-size: 1.4em; }\n.container .card .card-content .skillbar {\n        position: relative;\n        display: block;\n        margin-bottom: 17px;\n        margin-top: 45px;\n        width: 100%;\n        padding: 0 0;\n        background: #939393;\n        height: 4px;\n        transition: 0.4s linear;\n        transition-property: all;\n        transition-property: width, background-color; }\n.container .card .card-content .skillbar .skillbar-title {\n          position: absolute;\n          top: 0;\n          left: 0;\n          font-size: 1em; }\n.container .card .card-content .skillbar .skillbar-title span {\n            display: block;\n            padding: 3px 0;\n            margin-top: -25px;\n            line-height: 15px;\n            color: #fff; }\n.container .card .card-content .skillbar .skillbar-bar {\n          height: 4px;\n          background: #FFF;\n          visibility: visible;\n          opacity: 1;\n          transform: scale(1);\n          -webkit-transform: scale(1);\n          transition: opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s, -webkit-transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s;\n          transition: transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s, opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s;\n          transition: transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s, opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s, -webkit-transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s;\n          -webkit-transition: -webkit-transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s, opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s; }\n.container .card .card-content .skillbar .skill-bar-percent {\n          position: absolute;\n          right: 1px;\n          top: -20px;\n          font-size: .8em;\n          line-height: 15px;\n          color: #FFF; }\n"
+
+/***/ }),
+
+/***/ "./src/app/skills/skills.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/skills/skills.component.ts ***!
+  \********************************************/
+/*! exports provided: SkillsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillsComponent", function() { return SkillsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SkillsComponent = /** @class */ (function () {
+    function SkillsComponent() {
+        this.skillsInfo = [
+            {
+                'title': 'Languages',
+                'skills': [
+                    {
+                        'name': 'Python',
+                        'percent': '8.5'
+                    }, {
+                        'name': 'JavaScript',
+                        'percent': '7.5'
+                    }, {
+                        'name': 'C',
+                        'percent': '7.0'
+                    }, {
+                        'name': 'C++',
+                        'percent': '6.5'
+                    }
+                ]
+            }, {
+                'title': 'Web Development',
+                'skills': [
+                    {
+                        'name': 'HTML5/CSS3',
+                        'percent': '9.0'
+                    }, {
+                        'name': 'Django',
+                        'percent': '8.5'
+                    }, {
+                        'name': 'React',
+                        'percent': '7.5'
+                    }, {
+                        'name': 'Angular/Vue.js',
+                        'percent': '7.0'
+                    }
+                ]
+            }, {
+                'title': 'Tools and Technologies',
+                'skills': [
+                    {
+                        'name': 'Git',
+                        'percent': '8.5'
+                    }, {
+                        'name': 'Docker',
+                        'percent': '7.0'
+                    }, {
+                        'name': 'Database',
+                        'percent': '8.0'
+                    }, {
+                        'name': 'Travis',
+                        'percent': '6.0'
+                    }
+                ]
+            }
+        ];
+    }
+    SkillsComponent.prototype.ngOnInit = function () {
+    };
+    SkillsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-skills',
+            template: __webpack_require__(/*! ./skills.component.html */ "./src/app/skills/skills.component.html"),
+            styles: [__webpack_require__(/*! ./skills.component.scss */ "./src/app/skills/skills.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SkillsComponent);
+    return SkillsComponent;
 }());
 
 

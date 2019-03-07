@@ -130,7 +130,7 @@ module.exports = "body,h1,h2,h3,h4,h5,h6{font-weight:300}.view,.view .mask,.wave
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* Break points */\n/* Colors */\nbody {\n  font-family: 'Raleway', sans-serif;\n  font-size: 15px;\n  background-color: #f5f5f5;\n  color: #616161; }\n.container {\n  max-width: 1000px; }\n@media (min-width: 576px) {\n    .container {\n      max-width: 100%; } }\n@media (min-width: 768px) {\n    .container {\n      max-width: 750px; } }\n@media (min-width: 992px) {\n    .container {\n      max-width: 970px; } }\n"
+module.exports = "/* Break points */\n/* Colors */\nbody {\n  font-family: 'Raleway', sans-serif;\n  font-size: 15px;\n  background-color: #f5f5f5;\n  color: #616161; }\n.container {\n  max-width: 1000px; }\n@media (min-width: 576px) {\n    .container {\n      max-width: 100%; } }\n@media (min-width: 768px) {\n    .container {\n      max-width: 750px; } }\n@media (min-width: 992px) {\n    .container {\n      max-width: 970px; } }\n.container .section-header {\n    font-weight: 600;\n    font-size: 33px;\n    margin: 1.14rem 0 0.912rem 0; }\n.container .section-header img {\n      width: 66px;\n      height: 66px;\n      padding: 6px;\n      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n      margin: -2px 12px 12px 12px; }\n"
 
 /***/ }),
 
