@@ -15,7 +15,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 AOS.init({
   once: true,
-  duration: 1100,
+  duration: 1000,
   offset: -20,
   easing: 'ease-in-out-cubic'
 });

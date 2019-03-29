@@ -52,15 +52,9 @@
         }
 
         .skillbar-bar {
+          width: 0;
           height: 4px;
           background: $white;
-
-          visibility: visible;
-          opacity: 1;
-          transform: scale(1);
-          -webkit-transform: scale(1);
-          transition: transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s, opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s;
-          -webkit-transition: -webkit-transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s, opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0.3s;
         }
 
         .skill-bar-percent {
@@ -75,4 +69,9 @@
     }
   }
 
+}
+
+@keyframes increaseWidth {
+  0% { width: 0; }
+  50% { width: 0; }
 }
