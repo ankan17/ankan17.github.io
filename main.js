@@ -94,7 +94,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <header id=\"header\">\n    <div class=\"header-image\"></div>\n  </header>\n  <app-info-card></app-info-card>\n  <app-about></app-about>\n  <app-education></app-education>\n  <app-skills></app-skills>\n</div>\n"
+module.exports = "<div>\n  <header id=\"header\">\n    <div class=\"header-image\"></div>\n  </header>\n  <app-info-card></app-info-card>\n  <app-about></app-about>\n  <app-education></app-education>\n  <app-skills></app-skills>\n  <app-experience></app-experience>\n</div>\n"
 
 /***/ }),
 
@@ -161,12 +161,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _info_card_info_card_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./info-card/info-card.component */ "./src/app/info-card/info-card.component.ts");
 /* harmony import */ var _education_education_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./education/education.component */ "./src/app/education/education.component.ts");
 /* harmony import */ var _skills_skills_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./skills/skills.component */ "./src/app/skills/skills.component.ts");
+/* harmony import */ var _experience_experience_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./experience/experience.component */ "./src/app/experience/experience.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -184,7 +186,8 @@ var AppModule = /** @class */ (function () {
                 _about_about_component__WEBPACK_IMPORTED_MODULE_3__["AboutComponent"],
                 _info_card_info_card_component__WEBPACK_IMPORTED_MODULE_4__["InfoCardComponent"],
                 _education_education_component__WEBPACK_IMPORTED_MODULE_5__["EducationComponent"],
-                _skills_skills_component__WEBPACK_IMPORTED_MODULE_6__["SkillsComponent"]
+                _skills_skills_component__WEBPACK_IMPORTED_MODULE_6__["SkillsComponent"],
+                _experience_experience_component__WEBPACK_IMPORTED_MODULE_7__["ExperienceComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
@@ -207,7 +210,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-center section-header\">\n    <img src=\"../../assets/education.png\" data-aos=\"fade-up\" data-aos-duration=\"500\" />\n    Education\n  </h4>\n  <div class=\"education-timeline\">\n    <div class=\"timeline-block\" *ngFor=\"let block of blocks\">\n      <div class=\"timeline-dot\">\n        <h6>{{ block.dot }}</h6>\n      </div>\n      <div class=\"card timeline-content\" data-aos=\"fade-up\">\n        <div class=\"card-content\">\n          <h6 class=\"timeline-title\">{{ block.name }}</h6>\n          <div class=\"timeline-info\">\n            <h6>{{ block.institute }}</h6>\n            <h6>{{ block.duration }}</h6>\n          </div>\n          <p>{{ block.description }}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-center section-header\">\n    <img src=\"../../assets/education.png\" data-aos=\"fade-up\" data-aos-duration=\"500\" />\n    Education\n  </h4>\n  <div class=\"education-timeline\">\n    <div class=\"timeline-block\" *ngFor=\"let block of blocks\">\n      <div class=\"timeline-dot\">\n        <h6>{{ block.dot }}</h6>\n      </div>\n      <div class=\"card timeline-content\" data-aos=\"fade-up\">\n        <div class=\"card-content\">\n          <h4 class=\"timeline-title\">{{ block.name }}</h4>\n          <div class=\"timeline-info\">\n            <h5>{{ block.institute }}</h5>\n            <h6>{{ block.duration }}</h6>\n          </div>\n          <p>{{ block.description }}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -218,7 +221,7 @@ module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* Break points */\n/* Colors */\n.container {\n  position: relative;\n  margin-bottom: 150px; }\n.container .education-timeline::before {\n    content: '';\n    position: absolute;\n    top: 100px;\n    left: 50%;\n    margin-left: -2px;\n    height: 57.1%;\n    width: 4px;\n    opacity: 0.3;\n    background: #038175; }\n@media (max-width: 768px) {\n      .container .education-timeline::before {\n        height: 77.1%; } }\n.container .education-timeline .timeline-block {\n    overflow: hidden; }\n.container .education-timeline .timeline-block:not(:first-child) {\n      margin: 0.5em 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block:not(:first-child) {\n          margin: -6em 0; } }\n.container .education-timeline .timeline-block .timeline-dot {\n      position: absolute;\n      left: 50%;\n      width: 50px;\n      height: 50px;\n      z-index: 2;\n      margin-left: -25px;\n      background: #038175;\n      border-radius: 100%;\n      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n      color: #FFF;\n      text-align: center; }\n@media (max-width: 768px) {\n        .container .education-timeline .timeline-block .timeline-dot {\n          left: auto;\n          right: 4%;\n          margin-top: 5px; } }\n.container .education-timeline .timeline-block .timeline-dot h6 {\n        padding: 0;\n        font-size: 30px;\n        font-weight: bold;\n        line-height: 50px;\n        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29); }\n.container .education-timeline .timeline-block .card {\n      margin: 0;\n      border-radius: 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block .card {\n          width: 44%; } }\n.container .education-timeline .timeline-block .card .card-content {\n        padding: 20px;\n        border-radius: 0 0 2px 2px; }\n.container .education-timeline .timeline-block .timeline-content {\n      position: relative;\n      background: #fff;\n      margin-right: 0;\n      z-index: 1;\n      margin-bottom: 5px;\n      border-left: 5px solid #9C27B0; }\n.container .education-timeline .timeline-block .timeline-content .timeline-title {\n        max-width: 100%;\n        font-size: 21px;\n        margin: 10px 0 20px; }\n.container .education-timeline .timeline-block .timeline-content .timeline-info h6 {\n        font-size: 17px;\n        line-height: 15px;\n        margin: 10px 0; }\n.container .education-timeline .timeline-block .timeline-content p {\n        margin-top: 20px;\n        font-size: 15px; }\n.container .education-timeline .timeline-block .timeline-content::before {\n        content: '';\n        width: 58px;\n        height: 4px;\n        position: absolute;\n        top: 26px;\n        left: 100%;\n        z-index: -2;\n        opacity: 0.3;\n        background: #038175; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content {\n      float: right; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content::before {\n        top: 25px;\n        left: auto;\n        right: 101.2%;\n        z-index: -2; }\n"
+module.exports = "/* Break points */\n/* Colors */\n.container {\n  position: relative;\n  margin-bottom: 150px; }\n.container .education-timeline::before {\n    content: '';\n    position: absolute;\n    top: 100px;\n    left: 50%;\n    margin-left: -2px;\n    height: 57.1%;\n    width: 4px;\n    opacity: 0.3;\n    background: #038175; }\n@media (max-width: 768px) {\n      .container .education-timeline::before {\n        height: 77.1%; } }\n.container .education-timeline .timeline-block {\n    overflow: hidden; }\n.container .education-timeline .timeline-block:not(:first-child) {\n      margin: 0.5em 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block:not(:first-child) {\n          margin: -6em 0; } }\n.container .education-timeline .timeline-block .timeline-dot {\n      position: absolute;\n      left: 50%;\n      width: 50px;\n      height: 50px;\n      z-index: 2;\n      margin-left: -25px;\n      background: #038175;\n      border-radius: 100%;\n      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n      color: #FFF;\n      text-align: center; }\n@media (max-width: 768px) {\n        .container .education-timeline .timeline-block .timeline-dot {\n          left: auto;\n          right: 4%;\n          margin-top: 5px; } }\n.container .education-timeline .timeline-block .timeline-dot h6 {\n        padding: 0;\n        font-size: 30px;\n        font-weight: bold;\n        line-height: 50px;\n        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29); }\n.container .education-timeline .timeline-block .card {\n      margin: 0;\n      border-radius: 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block .card {\n          width: 44%; } }\n.container .education-timeline .timeline-block .card .card-content {\n        padding: 20px;\n        border-radius: 0 0 2px 2px; }\n.container .education-timeline .timeline-block .timeline-content {\n      position: relative;\n      background: #fff;\n      margin-right: 0;\n      z-index: 1;\n      margin-bottom: 5px;\n      border-left: 5px solid #9C27B0; }\n.container .education-timeline .timeline-block .timeline-content .timeline-title {\n        max-width: 100%;\n        font-size: 21px;\n        margin: 10px 0 20px; }\n.container .education-timeline .timeline-block .timeline-content .timeline-info h6 {\n        font-size: 17px;\n        line-height: 15px;\n        margin: 10px 0; }\n.container .education-timeline .timeline-block .timeline-content p {\n        margin-top: 20px;\n        font-size: 15px; }\n.container .education-timeline .timeline-block .timeline-content h4 {\n        font-size: 22px; }\n.container .education-timeline .timeline-block .timeline-content h5 {\n        font-size: 18px; }\n.container .education-timeline .timeline-block .timeline-content h6 {\n        font-size: 16px !important;\n        font-style: italic;\n        font-weight: 100; }\n.container .education-timeline .timeline-block .timeline-content::before {\n        content: '';\n        width: 58px;\n        height: 4px;\n        position: absolute;\n        top: 26px;\n        left: 100%;\n        z-index: -2;\n        opacity: 0.3;\n        background: #038175; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content {\n      float: right; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content::before {\n        top: 25px;\n        left: auto;\n        right: 101.2%;\n        z-index: -2; }\n"
 
 /***/ }),
 
@@ -280,6 +283,85 @@ var EducationComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], EducationComponent);
     return EducationComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/experience/experience.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/experience/experience.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <h4 class=\"text-uppercase text-center section-header\">\n    <img src=\"../../assets/experience.png\" data-aos=\"fade-up\" data-aos-duration=\"500\" />\n    Experience\n  </h4>\n  <div class=\"education-timeline\">\n    <div class=\"timeline-block\" *ngFor=\"let block of blocks\">\n      <div class=\"timeline-dot\">\n        <h6>{{ block.dot }}</h6>\n      </div>\n      <div class=\"card timeline-content\" data-aos=\"fade-up\">\n        <div class=\"card-content\">\n          <h4 class=\"timeline-title\">{{ block.name }}</h4>\n          <div class=\"timeline-info\">\n            <h5>{{ block.position }}</h5>\n            <h6>{{ block.duration }}</h6>\n          </div>\n          <p>{{ block.description }}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/experience/experience.component.scss":
+/*!******************************************************!*\
+  !*** ./src/app/experience/experience.component.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* Break points */\n/* Colors */\n.container {\n  position: relative;\n  margin-bottom: 150px; }\n.container .education-timeline::before {\n    content: '';\n    position: absolute;\n    top: 100px;\n    left: 50%;\n    margin-left: -2px;\n    height: 42.1%;\n    width: 4px;\n    opacity: 0.3;\n    background: #038175; }\n@media (max-width: 768px) {\n      .container .education-timeline::before {\n        height: 77.1%; } }\n.container .education-timeline .timeline-block {\n    overflow: hidden; }\n.container .education-timeline .timeline-block:not(:first-child) {\n      margin: 0.5em 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block:not(:first-child) {\n          margin: -6em 0; } }\n.container .education-timeline .timeline-block .timeline-dot {\n      position: absolute;\n      left: 50%;\n      width: 50px;\n      height: 50px;\n      z-index: 2;\n      margin-left: -25px;\n      background: #038175;\n      border-radius: 100%;\n      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n      color: #FFF;\n      text-align: center; }\n@media (max-width: 768px) {\n        .container .education-timeline .timeline-block .timeline-dot {\n          left: auto;\n          right: 4%;\n          margin-top: 5px; } }\n.container .education-timeline .timeline-block .timeline-dot h6 {\n        padding: 0;\n        font-size: 30px;\n        font-weight: bold;\n        line-height: 50px;\n        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29); }\n.container .education-timeline .timeline-block .card {\n      margin: 0;\n      border-radius: 0; }\n@media (min-width: 768px) {\n        .container .education-timeline .timeline-block .card {\n          width: 44%; } }\n.container .education-timeline .timeline-block .card .card-content {\n        padding: 20px;\n        border-radius: 0 0 2px 2px; }\n.container .education-timeline .timeline-block .timeline-content {\n      position: relative;\n      background: #fff;\n      margin-right: 0;\n      z-index: 1;\n      margin-bottom: 5px;\n      border-left: 5px solid #9C27B0; }\n.container .education-timeline .timeline-block .timeline-content .timeline-title {\n        max-width: 100%;\n        font-size: 21px;\n        margin: 10px 0 20px; }\n.container .education-timeline .timeline-block .timeline-content .timeline-info h6 {\n        font-size: 17px;\n        line-height: 15px;\n        margin: 10px 0; }\n.container .education-timeline .timeline-block .timeline-content p {\n        margin-top: 20px;\n        font-size: 15px; }\n.container .education-timeline .timeline-block .timeline-content h4 {\n        font-size: 22px; }\n.container .education-timeline .timeline-block .timeline-content h5 {\n        font-size: 18px; }\n.container .education-timeline .timeline-block .timeline-content h6 {\n        font-size: 16px !important;\n        font-style: italic;\n        font-weight: 100; }\n.container .education-timeline .timeline-block .timeline-content::before {\n        content: '';\n        width: 58px;\n        height: 4px;\n        position: absolute;\n        top: 26px;\n        left: 100%;\n        z-index: -2;\n        opacity: 0.3;\n        background: #038175; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content {\n      float: right; }\n.container .education-timeline .timeline-block:nth-child(2n) .timeline-content::before {\n        top: 25px;\n        left: auto;\n        right: 101.2%;\n        z-index: -2; }\n"
+
+/***/ }),
+
+/***/ "./src/app/experience/experience.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/experience/experience.component.ts ***!
+  \****************************************************/
+/*! exports provided: ExperienceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceComponent", function() { return ExperienceComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ExperienceComponent = /** @class */ (function () {
+    function ExperienceComponent() {
+        this.blocks = [
+            {
+                dot: 'G',
+                name: 'Google Summer of Code',
+                position: 'Student Developer',
+                duration: 'May 2018 - August 2018',
+                description: "Working with CROSS as a student developer, my project included adding features\n        (most notably, the archival feature) to the Popper CLI tool, which aims to simplify experimentation\n        using a DevOps approach. I also added many other sub-commands and created a badge server."
+            },
+            {
+                dot: 'S',
+                name: 'Shopizle Inc.',
+                position: 'Software Engineering Intern',
+                duration: 'May 2018 – November 2018',
+                description: "My major task was to work on the frontend of their website, built with React,\n        adding new features and updating and fixing existing features. I also worked on the backend,\n        mainly doing email and website scraping (with selenium) and database and API integration."
+            }
+        ];
+    }
+    ExperienceComponent.prototype.ngOnInit = function () {
+    };
+    ExperienceComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-experience',
+            template: __webpack_require__(/*! ./experience.component.html */ "./src/app/experience/experience.component.html"),
+            styles: [__webpack_require__(/*! ./experience.component.scss */ "./src/app/experience/experience.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ExperienceComponent);
+    return ExperienceComponent;
 }());
 
 
