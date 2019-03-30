@@ -99,6 +99,20 @@
           font-size: 15px;
         }
 
+        h4 {
+          font-size: 22px;
+        }
+
+        h5 {
+          font-size: 18px;
+        }
+
+        h6 {
+          font-size: 16px !important;
+          font-style: italic;
+          font-weight: 100;
+        }
+
         &::before {
           content: '';
           width: 58px;
