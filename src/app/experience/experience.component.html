@@ -1,0 +1,23 @@
+<div class="container">
+  <h4 class="text-uppercase text-center section-header">
+    <img src="../../assets/experience.png" data-aos="fade-up" data-aos-duration="500" />
+    Experience
+  </h4>
+  <div class="education-timeline">
+    <div class="timeline-block" *ngFor="let block of blocks">
+      <div class="timeline-dot">
+        <h6>{{ block.dot }}</h6>
+      </div>
+      <div class="card timeline-content" data-aos="fade-up">
+        <div class="card-content">
+          <h4 class="timeline-title">{{ block.name }}</h4>
+          <div class="timeline-info">
+            <h5>{{ block.position }}</h5>
+            <h6>{{ block.duration }}</h6>
+          </div>
+          <p>{{ block.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
