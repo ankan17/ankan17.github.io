@@ -4,6 +4,10 @@
 .container {
   margin-bottom: 50px;
 
+  @media(max-width: $tablet-breakpoint) {
+    margin-bottom: 25px;
+  }
+
   .card {
     background: $theme-light;
 
@@ -13,6 +17,15 @@
 
       .skills-title {
         margin: 15px 0;
+        @media(max-width: $small-desktop-breakpoint) {
+          height: 50px;
+          margin-top: 0;
+          margin-bottom: 25px;
+        }
+        @media(max-width: $mobile-breakpoint) {
+          margin: 15px 0;
+          height: auto;
+        }
 
         h6 {
           color: $white;

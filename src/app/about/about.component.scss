@@ -5,7 +5,7 @@
   margin-bottom: 70px;
 
   @media(max-width: $tablet-breakpoint) {
-    top: 162px;
+    margin-bottom: 30px;
   }
 
   .card {
@@ -20,12 +20,21 @@
         color: rgb(97, 97, 97);
         font-size: 0.98rem;
         text-align: center;
+
+        @media(max-width: $mobile-breakpoint) {
+          padding: 25px;
+          font-size: 0.85rem;
+        }
       }
     }
 
     .card-action {
       padding: 20px;
       text-align: center;
+
+      @media(max-width: $tablet-breakpoint) {
+        padding: 15px;
+      }
 
       a.btn {
         margin: 7px 7px;
