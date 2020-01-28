@@ -21,7 +21,7 @@ export class ExperienceComponent implements OnInit {
       dot: 'S',
       name: 'Shopizle Inc.',
       position: 'Software Engineering Intern',
-      duration: 'May 2018 – November 2018',
+      duration: 'May 2019 – June 2019',
       description: `My major task was to work on the frontend of their website, built with React,
         adding new features and updating and fixing existing features. I also worked on the backend,
         mainly doing email and website scraping (with selenium) and database and API integration.`
