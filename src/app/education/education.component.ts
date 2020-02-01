@@ -29,8 +29,8 @@ export class EducationComponent implements OnInit {
       name: 'Computer Science and Engineering',
       institute: 'National Institute of Technology',
       duration: 'July 2016 - Present',
-      description: `I am currently studying Computer Science in this prestigious college of national
-        repute and I am in the 3rd year of college with a CGPA of 9.31.`
+      description: `I am currently studying Computer Science and Engineering in this
+         prestigious college of national repute and I am in the final year of my graduation.`
     }
   ];
 
