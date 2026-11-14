@@ -2,8 +2,13 @@ export interface Project {
   slug: string;
   dir: string;
   title: string;
+  /** Short descriptor appended to the page title, e.g. "Studio, a desktop video editor". */
+  kind: string;
   tagline: string;
   summary: string;
+  /** Search snippet; keep under 155 characters. */
+  description: string;
+  languages: string[];
   figure: string;
   figureLabel: string;
   repo?: string;
@@ -17,6 +22,10 @@ export const projects: Project[] = [
     slug: 'studio',
     dir: 'studio/',
     title: 'Studio',
+    kind: 'a desktop video editor',
+    description:
+      'Studio is a desktop video editor for macOS, built on Electron and Remotion to run on an 8GB Mac, with strict memory budgets and crash-safe saves.',
+    languages: ['TypeScript'],
     tagline: 'A desktop video editor designed around your time and your machine’s limits',
     summary:
       'A video editor for macOS built on Remotion and Electron, designed from the start to run on a base 8GB Apple Silicon machine.',
@@ -56,6 +65,10 @@ export    under 1.5 GB peak`,
     slug: 'agentreplay',
     dir: 'agentreplay/',
     title: 'AgentReplay',
+    kind: 'replay debugging for LLM agents',
+    description:
+      'AgentReplay is a TypeScript library that records LLM agent runs, so failures can be replayed, forked and diffed without repeating side effects.',
+    languages: ['TypeScript'],
     tagline: 'A TypeScript record/replay debugger for agent failures, without repeating side effects',
     summary:
       'A TypeScript library that records every model call and tool call an agent makes, so a failed run can be replayed exactly, forked with a fix, and compared, without repeating side effects like a refund.',
@@ -100,6 +113,10 @@ fork    model live,
     slug: 'clothtrends',
     dir: 'clothtrends/',
     title: 'ClothTrends',
+    kind: 'shop inventory and billing',
+    description:
+      'ClothTrends is an inventory and billing app for shops: barcode point of sale, stock by supplier lot, and Bluetooth receipt and label printing.',
+    languages: ['TypeScript', 'Kotlin'],
     tagline: 'An inventory and billing app for running a shop and making better decisions, on existing hardware',
     summary:
       'Inventory and billing for a cloth shop: point of sale at the counter, stock tracked by supplier lot, and labels and receipts printed over Bluetooth.',

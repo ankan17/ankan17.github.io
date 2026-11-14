@@ -7,6 +7,8 @@ export const site = {
   description:
     'Ankan Poddar, senior full-stack engineer designing systems that scale. AI voice and text agents at Avoca; previously built and led VideoKYC at HyperVerge.',
   location: 'Bangalore, India',
+  // Headshot for search engines (schema.org Person image). Metadata stripped.
+  photo: '/ankan-poddar.jpg',
   email: 'apoddar1701@gmail.com',
   linkedin: 'https://www.linkedin.com/in/ankan-poddar-86a6b6163',
   github: 'https://github.com/ankan17',

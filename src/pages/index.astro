@@ -17,7 +17,7 @@ const words = site.headline.split(' ').map((word) => ({
 }));
 ---
 
-<Base title={site.name} current="home">
+<Base title={site.name} current="home" ogType="profile">
   <Prompt path="~" cmd="about" />
   <h1 class="type" aria-label={site.headline}>
     {
