@@ -13,7 +13,7 @@ interface Props {
 const { title, description = site.description, current = '', noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = new URL('/og.png', site.url).href;
-const fullTitle = title === site.name ? `${site.name}, senior full-stack engineer` : `${title} | ${site.name}`;
+const fullTitle = title === site.name ? `${site.name}, senior full-stack engineer` : `${site.name} | ${title}`;
 
 const person = {
   '@context': 'https://schema.org',

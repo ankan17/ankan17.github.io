@@ -5,10 +5,10 @@ import ProjectList from '../../components/ProjectList.astro';
 import EndPrompt from '../../components/EndPrompt.astro';
 ---
 
-<Base title="Work" current="work" description="Selected work by Ankan Poddar: a desktop video editor, record and replay debugging for LLM agents, and a shop inventory and billing system.">
+<Base title="Work" current="work" description="Selected work by Ankan Poddar: software built end to end, with a short write-up for each project.">
   <Prompt path="~/work" cmd="ls" />
   <h1 class="page-h">Work</h1>
-  <p class="lede">Three projects I have built end to end. Each one opens into a short write-up.</p>
+  <p class="lede">I love taking a problem apart and building software that makes someone’s day easier. Each project is a chance to learn something deeply and put it to practical use.</p>
   <div class="block"><ProjectList /></div>
   <EndPrompt path="~/work" />
 </Base>

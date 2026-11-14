@@ -21,7 +21,7 @@ const next = projects[(index + 1) % projects.length];
   <div class="act">
     {
       project.repo ? (
-        <a class="btn primary" href={project.repo}>{project.repoNote}</a>
+        <a class="btn primary" href={project.repo} target="_blank" rel="noopener">{project.repoNote}<span class="sr"> (opens in a new tab)</span></a>
       ) : (
         <p class="stack">{project.repoNote}.</p>
       )

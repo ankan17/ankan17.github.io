@@ -747,6 +747,14 @@ p {
   white-space: pre;
 }
 
+.ps {
+  margin-top: 8px;
+  color: var(--soft);
+  font-size: 15.5px;
+}
+
+.ps span { color: var(--garnet); }
+
 .next {
   display: flex;
   flex-wrap: wrap;

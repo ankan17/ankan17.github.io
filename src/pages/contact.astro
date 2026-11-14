@@ -12,14 +12,16 @@ import { site } from '../data/site';
 
   <dl class="facts block">
     <div><dt>email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
-    <div><dt>linkedin</dt><dd><a href={site.linkedin}>linkedin.com/in/ankan-poddar-86a6b6163</a></dd></div>
-    <div><dt>github</dt><dd><a href={site.github}>github.com/ankan17</a></dd></div>
+    <div><dt>linkedin</dt><dd><a href={site.linkedin} target="_blank" rel="noopener">linkedin.com/in/ankan-poddar-86a6b6163<span class="sr"> (opens in a new tab)</span></a></dd></div>
+    <div><dt>github</dt><dd><a href={site.github} target="_blank" rel="noopener">github.com/ankan17<span class="sr"> (opens in a new tab)</span></a></dd></div>
     <div><dt>location</dt><dd>{site.location}</dd></div>
   </dl>
 
   <div class="act">
     <a class="btn primary" href={`mailto:${site.email}`}>Email me</a>
   </div>
+
+  <p class="ps"><span aria-hidden="true"># </span>P.S. If you can't tell, I'm a Barcelona and a football fan.</p>
 
   <EndPrompt path="~" />
 </Base>
