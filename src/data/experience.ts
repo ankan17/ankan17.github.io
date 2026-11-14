@@ -89,13 +89,14 @@ export const achievements = [
   'Google Summer of Code 2018 with UC Santa Cruz (CROSS), working on the Popper CLI. 30 merged pull requests.',
 ];
 
-export const skills = [
-  { name: 'languages', items: 'TypeScript, JavaScript, Python, SQL' },
-  { name: 'backend', items: 'Node.js (Express, NestJS), WebSockets, event-driven systems' },
-  { name: 'data', items: 'PostgreSQL, MongoDB, Redis, Elasticsearch, DynamoDB' },
-  { name: 'cloud', items: 'AWS' },
-  { name: 'frontend', items: 'React, Next.js' },
-  { name: 'ai', items: 'OpenAI APIs, voice AI, tool calling, agentic workflows, LLM evaluation' },
+// `core` marks the tools used day to day; they render filled.
+export const skills: { name: string; items: string[]; core?: string[] }[] = [
+  { name: 'languages', items: ['TypeScript', 'JavaScript', 'Python', 'SQL'], core: ['TypeScript'] },
+  { name: 'backend', items: ['Node.js', 'Express', 'NestJS', 'WebSockets', 'event-driven systems'], core: ['Node.js'] },
+  { name: 'data', items: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'DynamoDB'], core: ['PostgreSQL'] },
+  { name: 'cloud', items: ['AWS'], core: ['AWS'] },
+  { name: 'frontend', items: ['React', 'Next.js'] },
+  { name: 'ai', items: ['OpenAI APIs', 'voice AI', 'tool calling', 'agentic workflows', 'LLM evaluation'], core: ['agentic workflows'] },
 ];
 
 export const stats = [
