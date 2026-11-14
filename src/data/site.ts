@@ -5,7 +5,7 @@ export const site = {
   headline: 'Senior full-stack engineer building AI products.',
   now: 'I design systems that hold up at scale. At Avoca, I build AI voice and text agents. Before that, I spent five years at HyperVerge building VideoKYC and its data platform, and leading the team behind them.',
   description:
-    'Ankan Poddar is a senior full-stack engineer who designs systems that hold up at scale. AI voice and text agents at Avoca; previously VideoKYC and its data platform at HyperVerge, leading the team behind them.',
+    'Ankan Poddar, senior full-stack engineer designing systems that scale. AI voice and text agents at Avoca; previously built and led VideoKYC at HyperVerge.',
   location: 'Bangalore, India',
   email: 'apoddar1701@gmail.com',
   linkedin: 'https://www.linkedin.com/in/ankan-poddar-86a6b6163',
