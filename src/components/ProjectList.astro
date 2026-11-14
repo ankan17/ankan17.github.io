@@ -1,0 +1,18 @@
+---
+import { projects } from '../data/projects';
+import ProjectArt from './ProjectArt.astro';
+---
+
+<ul class="ls">
+  {
+    projects.map((p) => (
+      <li>
+        <a class="entry" href={`/work/${p.slug}/`}>
+          <div class="thumb" aria-label={p.figureLabel}><ProjectArt slug={p.slug} /></div>
+          <strong>{p.dir}</strong>
+          <span>{p.tagline}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

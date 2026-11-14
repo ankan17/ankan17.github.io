@@ -1,0 +1,16 @@
+---
+interface Props {
+  path?: string;
+  cmd?: string;
+  heading?: string;
+  class?: string;
+}
+const { path = '~', cmd, heading, class: cls = '' } = Astro.props;
+const Tag = heading ? 'h2' : 'p';
+---
+
+<Tag class={`prompt ${cls}`.trim()} aria-hidden={heading ? undefined : 'true'}>
+  <span aria-hidden="true" class="segs"><b class="g">ankan</b><b class="b">{path}</b></span>
+  {cmd && <span aria-hidden="true" class="cmd">{cmd}</span>}
+  {heading && <span class="sr">{heading}</span>}
+</Tag>

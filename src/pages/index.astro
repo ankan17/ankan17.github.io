@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import Prompt from '../components/Prompt.astro';
+import ProjectList from '../components/ProjectList.astro';
+import EndPrompt from '../components/EndPrompt.astro';
+import { site } from '../data/site';
+
+const resume = site.resumeUrl
+  ? { href: site.resumeUrl, label: 'Résumé (PDF)' }
+  : { href: '/experience/', label: 'Experience' };
+
+const STEP = 0.9 / 48; // same pace as before: 0.9s for 48 characters
+let n = 0;
+const words = site.headline.split(' ').map((word) => ({
+  chars: [...word].map((ch) => ({ ch, delay: 0.25 + n++ * STEP })),
+  gap: (n++, 0),
+}));
+---
+
+<Base title={site.name} current="home">
+  <Prompt path="~" cmd="about" />
+  <h1 class="type" aria-label={site.headline}>
+    {
+      words.map((w, i) => (
+        <>
+          <span class="word" aria-hidden="true">
+            {w.chars.map((c) => <span class="ch" style={`animation-delay:${c.delay.toFixed(3)}s`}>{c.ch}</span>)}
+          </span>
+          {i < words.length - 1 && ' '}
+        </>
+      ))
+    }
+  </h1>
+  <p class="lede">{site.now}</p>
+  <div class="act">
+    <a class="btn primary" href={`mailto:${site.email}`}>Email me</a>
+    <a class="btn" href={resume.href}>{resume.label}</a>
+  </div>
+
+  <Prompt path="~/work" cmd="ls" heading="Selected work" />
+  <ProjectList />
+
+
+  <EndPrompt path="~" />
+</Base>

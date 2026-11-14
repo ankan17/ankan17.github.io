@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blaugrana Standard sketch</title>
+<style>
+  :root{--bg:#FFFFFF;--ink:#0E1A33;--muted:#56607A;--line:#E3E6EE;--blue:#004D98;--garnet:#A50044;--gold:#EDBB00}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:var(--bg);color:var(--ink);font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif}
+  .stripes{height:10px;background:repeating-linear-gradient(90deg,var(--blue) 0 48px,var(--garnet) 48px 96px);transform-origin:left;animation:draw 1.1s cubic-bezier(.2,.7,.2,1) both}
+  header{display:flex;justify-content:space-between;align-items:center;padding:22px 96px;font-size:16px}
+  header b{font-size:19px}
+  header nav{display:flex;gap:30px;color:var(--muted)}
+  header nav span:first-child{color:var(--ink);box-shadow:inset 0 -2px 0 var(--garnet)}
+  .hero{display:grid;grid-template-columns:6fr 6fr;gap:56px;padding:48px 96px 0;align-items:start}
+  .kicker{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--garnet);font-weight:600;animation:up .7s .15s both}
+  h1{font-size:56px;line-height:1.05;font-weight:700;letter-spacing:-.02em;animation:up .7s .2s both}
+  .now{font-size:19px;color:var(--muted);margin-top:18px;line-height:1.5;max-width:30em;animation:up .7s .35s both}
+  .act{display:flex;gap:14px;margin-top:28px;animation:up .7s .45s both}
+  .act span{font-size:17px;padding:14px 22px;border-radius:6px;border:1.5px solid var(--blue);color:var(--blue)}
+  .act span:first-child{background:var(--blue);color:#fff}
+  .shot{position:relative;height:380px;border-radius:10px;background:#1E2126;box-shadow:0 24px 40px -28px rgba(14,26,51,.35);animation:up .9s .35s both}
+  .shot::after{content:"17";position:absolute;right:-18px;top:-46px;font-size:120px;font-weight:800;color:var(--garnet);opacity:.12;letter-spacing:-.04em}
+  .cap{font-size:15px;color:var(--muted);margin-top:12px}
+  .next{position:absolute;left:96px;right:96px;top:690px;animation:up .7s .6s both}
+  .divider{height:4px;width:96px;background:linear-gradient(90deg,var(--blue) 0 50%,var(--garnet) 50%)}
+  h2{font-size:30px;font-weight:700;letter-spacing:-.01em;margin-top:18px}
+  .peek{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;margin-top:22px}
+  .w{height:200px;border-radius:10px;background:#1E2126}
+  .x-row{display:grid;grid-template-columns:150px 200px 1fr 360px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+  .x-rowh{color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .x-rowb{color:var(--blue)}
+  @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="stripes"></div>
+<header><b>Ankan Poddar</b><nav><span>Home</span><span>Work</span><span>Experience</span><span>Writing</span><span>Contact</span></nav></header>
+<section class="hero">
+  <div>
+    <h1>Senior full-stack engineer building AI products.</h1>
+    <div class="now">Deployed Engineer at Avoca, building AI voice and text agents. Five years at HyperVerge before that. Bangalore, India.</div>
+    <div class="act"><span>Email me</span><span>Résumé (PDF)</span></div>
+  </div>
+  <div><div class="shot"></div><div class="cap">Studio · a desktop video editor for an 8GB Mac</div></div>
+</section>
+<div class="next">
+  <div class="divider"></div>
+  <h2>Selected work</h2>
+  <div class="peek"><div class="w big"></div><div class="w"></div><div class="w"></div></div>
+</div>
+</body>
+</html>

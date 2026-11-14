@@ -1,0 +1,85 @@
+---
+import { site } from '../data/site';
+const { path = '~' } = Astro.props;
+---
+
+<div class="prompt end static-cursor" aria-hidden="true">
+  <span class="segs"><b class="g">{site.handle}</b><b class="b">{path}</b></span>
+  <span class="cursor"></span>
+</div>
+
+<div class="live" data-live data-resume={site.resumeUrl ?? '/experience/'} data-email={site.email}>
+  <form class="prompt" autocomplete="off" spellcheck="false">
+    <span class="segs" aria-hidden="true"><b class="g">{site.handle}</b><b class="b">{path}</b></span>
+    <label class="sr" for="cmd">Command. Try help.</label>
+    <div class="field">
+      <input id="cmd" name="cmd" type="text" placeholder=" " autocapitalize="off" autocorrect="off" enterkeyhint="go" />
+      <span class="cursor" aria-hidden="true"></span>
+      <span class="hint" aria-hidden="true">help</span>
+    </div>
+  </form>
+  <p class="out" role="status" aria-live="polite"></p>
+</div>
+
+<script>
+  const routes: Record<string, string> = {
+    home: '/',
+    about: '/',
+    work: '/work/',
+    ls: '/work/',
+    projects: '/work/',
+    studio: '/work/studio/',
+    agentreplay: '/work/agentreplay/',
+    clothtrends: '/work/clothtrends/',
+    experience: '/experience/',
+    log: '/experience/',
+    contact: '/contact/',
+  };
+
+  const live = document.querySelector<HTMLElement>('[data-live]');
+  const form = live?.querySelector('form');
+  const input = live?.querySelector('input');
+  const out = live?.querySelector<HTMLElement>('.out');
+
+  if (live && form && input && out) {
+    const field = input.parentElement as HTMLElement;
+    const track = () => field.style.setProperty('--len', String(input.selectionStart ?? input.value.length));
+    ['input', 'keyup', 'click', 'focus', 'select'].forEach((e) => input.addEventListener(e, track));
+
+    const help =
+      'home  work  studio  agentreplay  clothtrends  experience  contact  email  resume\nKeys 1 to 4 also move between pages.';
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const raw = input.value.trim().toLowerCase();
+      const word = raw.replace(/^(cd|cat|open|go|goto|show)\s+/, '').replace(/^[~/.]+|\/$/g, '').split(/\s+/).pop() ?? '';
+      input.value = '';
+      track();
+      if (!raw) return;
+      if (raw === 'help' || raw === '?') {
+        out.textContent = help;
+      } else if (word === 'email') {
+        window.location.href = `mailto:${live.dataset.email}`;
+      } else if (word === 'resume' || word === 'cv') {
+        window.location.href = live.dataset.resume ?? '/experience/';
+      } else if (word in routes) {
+        window.location.href = routes[word];
+      } else {
+        out.textContent = `command not found: ${raw}\nType help to see what is available.`;
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target as HTMLElement;
+      if (target.closest('input, textarea, select, [contenteditable]')) return;
+      const pages = ['/', '/work/', '/experience/', '/contact/'];
+      if (event.key >= '1' && event.key <= '4') {
+        window.location.href = pages[Number(event.key) - 1];
+      } else if (event.key === '/') {
+        event.preventDefault();
+        input.focus();
+      }
+    });
+  }
+</script>

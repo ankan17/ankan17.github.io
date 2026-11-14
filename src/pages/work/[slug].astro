@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import Prompt from '../../components/Prompt.astro';
+import EndPrompt from '../../components/EndPrompt.astro';
+import { projects, type Project } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+
+const { project } = Astro.props as { project: Project };
+const index = projects.findIndex((p) => p.slug === project.slug);
+const next = projects[(index + 1) % projects.length];
+---
+
+<Base title={project.title} current="work" description={`${project.title}: ${project.summary}`}>
+  <Prompt path={`~/work/${project.slug}`} cmd="cat README.md" />
+  <h1 class="page-h">{project.title}</h1>
+  <p class="lede">{project.summary}</p>
+
+  <div class="act">
+    {
+      project.repo ? (
+        <a class="btn primary" href={project.repo}>{project.repoNote}</a>
+      ) : (
+        <p class="stack">{project.repoNote}.</p>
+      )
+    }
+  </div>
+
+  <pre class="fig" aria-label={project.figureLabel}>{project.figure}</pre>
+
+  {
+    project.sections.map((s) => (
+      <section class="block">
+        <h2>{s.heading}</h2>
+        {s.body && <p class="measure">{s.body}</p>}
+        {s.points && (
+          <ul class="points">
+            {s.points.map((pt) => (
+              <li>{pt}</li>
+            ))}
+          </ul>
+        )}
+      </section>
+    ))
+  }
+
+  <p class="stack">Stack: {project.stack}.</p>
+
+  <p class="next">
+    <a href="/work/">All work</a>
+    <a href={`/work/${next.slug}/`}>Next: {next.title}</a>
+  </p>
+
+  <EndPrompt path={`~/work/${project.slug}`} />
+</Base>

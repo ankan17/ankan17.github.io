@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import Prompt from '../components/Prompt.astro';
+import EndPrompt from '../components/EndPrompt.astro';
+import { experience, education, achievements, skills } from '../data/experience';
+---
+
+<Base title="Experience" current="experience" description="Experience of Ankan Poddar: Deployed Engineer at Avoca, and five years at HyperVerge from SDE1 to Engineering Manager.">
+  <Prompt path="~" cmd="cat experience.log" />
+  <h1 class="page-h">Experience</h1>
+  <p class="lede">Most recent first.</p>
+
+  {
+    experience.map((e) => (
+      <section class="employer">
+        <h2>
+          {e.company} <small>{e.place}</small>
+        </h2>
+        {e.roles.map((r) => (
+          <div class="role">
+            <div class="role-head">
+              <h3>{r.title}</h3>
+              <span class="period">{r.period}</span>
+            </div>
+            <ul class="points">
+              {r.points.map((pt) => (
+                <li>{pt}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    ))
+  }
+
+  <section class="block">
+    <h2>Education</h2>
+    <p>{education.degree}, {education.school}, {education.period}. {education.note}.</p>
+  </section>
+
+  <section class="block">
+    <h2>Achievements</h2>
+    <ul class="points">
+      {achievements.map((a) => <li>{a}</li>)}
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Skills</h2>
+    <dl class="facts">
+      {skills.map((s) => <div><dt>{s.name}</dt><dd>{s.items}</dd></div>)}
+    </dl>
+  </section>
+
+  <EndPrompt path="~" />
+</Base>

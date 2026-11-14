@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import Prompt from '../../components/Prompt.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import EndPrompt from '../../components/EndPrompt.astro';
+---
+
+<Base title="Work" current="work" description="Selected work by Ankan Poddar: a desktop video editor, record and replay debugging for LLM agents, and a shop inventory and billing system.">
+  <Prompt path="~/work" cmd="ls" />
+  <h1 class="page-h">Work</h1>
+  <p class="lede">Three projects I have built end to end. Each one opens into a short write-up.</p>
+  <div class="block"><ProjectList /></div>
+  <EndPrompt path="~/work" />
+</Base>
