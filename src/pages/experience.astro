@@ -2,53 +2,51 @@
 import Base from '../layouts/Base.astro';
 import Prompt from '../components/Prompt.astro';
 import EndPrompt from '../components/EndPrompt.astro';
-import { experience, education, achievements, skills } from '../data/experience';
+import { experience, education, achievements, skills, stats } from '../data/experience';
+
 ---
 
 <Base title="Experience" current="experience" description="Experience of Ankan Poddar: Deployed Engineer at Avoca, and five years at HyperVerge from SDE1 to Engineering Manager.">
-  <Prompt path="~" cmd="cat experience.log" />
+  <Prompt path="~" cmd="git log --oneline" />
   <h1 class="page-h">Experience</h1>
-  <p class="lede">Most recent first.</p>
+  <p class="lede">Five years from SDE1 to Engineering Manager at HyperVerge, now building AI agent integrations at Avoca.</p>
+
+  <ul class="stats">
+    {stats.map((s) => <li><strong>{s.value}</strong><span>{s.label}</span></li>)}
+  </ul>
 
   {
     experience.map((e) => (
       <section class="employer">
         <h2>
-          {e.company} <small>{e.place}</small>
+          {e.company} <small>{e.place} · {e.span}</small>
         </h2>
-        {e.roles.map((r) => (
-          <div class="role">
-            <div class="role-head">
-              <h3>{r.title}</h3>
-              <span class="period">{r.period}</span>
-            </div>
-            <ul class="points">
-              {r.points.map((pt) => (
-                <li>{pt}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <ol class="rail">
+          {e.roles.map((r) => (
+            <li>
+              <details>
+                <summary>
+                  <span class="when">{r.period}</span>
+                  <span class="who"><strong>{r.title}</strong></span>
+                  <span class="lead">{r.lead}</span>
+                </summary>
+                <ul class="points">
+                  {r.points.map((pt) => <li>{pt}</li>)}
+                </ul>
+              </details>
+            </li>
+          ))}
+        </ol>
       </section>
     ))
   }
 
-  <section class="block">
-    <h2>Education</h2>
-    <p>{education.degree}, {education.school}, {education.period}. {education.note}.</p>
-  </section>
-
-  <section class="block">
-    <h2>Achievements</h2>
-    <ul class="points">
-      {achievements.map((a) => <li>{a}</li>)}
-    </ul>
-  </section>
-
-  <section class="block">
-    <h2>Skills</h2>
+  <section class="block also">
+    <h2>Also</h2>
     <dl class="facts">
-      {skills.map((s) => <div><dt>{s.name}</dt><dd>{s.items}</dd></div>)}
+      <div><dt>education</dt><dd>{education.degree}, {education.school}, {education.period}. {education.note}.</dd></div>
+      {achievements.map((a) => <div><dt>recognition</dt><dd>{a}</dd></div>)}
+      <div><dt>works with</dt><dd>{skills.map((s) => s.items).join(', ')}</dd></div>
     </dl>
   </section>
 

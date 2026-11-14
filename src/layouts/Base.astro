@@ -54,7 +54,11 @@ const person = {
     <a class="skip" href="#main">Skip to content</a>
 
     <header class="bar">
-      <i class="d1"></i><i class="d2"></i><i class="d3"></i>
+      <div class="dots">
+        <a class="dot d1" href="/" aria-label="Close: go to home" title="Close (home)"><svg viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false"><path d="M4.6 4.6l4.8 4.8M9.4 4.6L4.6 9.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></a>
+        <button class="dot d2" type="button" aria-label="Narrower layout" title="Minimize: narrower layout"><svg viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3.8 7h6.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        <button class="dot d3" type="button" aria-label="Wider layout" title="Maximize: wider layout"><svg viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 3.8v6.4M3.8 7h6.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+      </div>
       <div class="title"><a href="/" aria-label={`${site.name}, home`}>{site.name}</a></div>
     </header>
 
@@ -78,5 +82,19 @@ const person = {
       </ul>
       <em>{site.location}</em>
     </nav>
+    <script>
+      const root = document.documentElement;
+      const less = document.querySelector<HTMLButtonElement>('.dot.d2');
+      const more = document.querySelector<HTMLButtonElement>('.dot.d3');
+      const sizes = ['is-narrow', '', 'is-wide'];
+      let size = 1;
+      const apply = () => {
+        sizes.forEach((c) => c && root.classList.toggle(c, sizes[size] === c));
+        less?.setAttribute('aria-disabled', String(size === 0));
+        more?.setAttribute('aria-disabled', String(size === 2));
+      };
+      less?.addEventListener('click', () => { size = Math.max(0, size - 1); apply(); });
+      more?.addEventListener('click', () => { size = Math.min(2, size + 1); apply(); });
+    </script>
   </body>
 </html>

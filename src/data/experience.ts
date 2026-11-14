@@ -1,5 +1,6 @@
 export interface Role {
   title: string;
+  lead: string;
   period: string;
   points: string[];
 }
@@ -7,6 +8,7 @@ export interface Role {
 export interface Employer {
   company: string;
   place: string;
+  span: string;
   roles: Role[];
 }
 
@@ -14,9 +16,11 @@ export const experience: Employer[] = [
   {
     company: 'Avoca',
     place: 'Remote',
+    span: 'Aug 2026 to present',
     roles: [
       {
         title: 'Deployed Engineer',
+        lead: 'Hardening production AI voice and text agents.',
         period: 'Aug 2026 to present',
         points: [
           'Build integrations for production AI voice and text agents: an API-based integration for home services and a browser automation for restoration workflows.',
@@ -28,9 +32,11 @@ export const experience: Employer[] = [
   {
     company: 'HyperVerge',
     place: 'Bangalore',
+    span: 'Jan 2021 to Jul 2026',
     roles: [
       {
         title: 'Engineering Manager',
+        lead: 'Led a team of 5 and halved lead time to production.',
         period: 'Apr to Jul 2026',
         points: [
           'Led a team of 5 and halved lead time to production.',
@@ -39,6 +45,7 @@ export const experience: Employer[] = [
       },
       {
         title: 'SDE3',
+        lead: 'LLM support automation, security audits and quieter alerts.',
         period: 'Apr 2024 to Mar 2026',
         points: [
           'Built an LLM support-automation system with Freshdesk that cut mean time to resolution by 30 to 40%.',
@@ -49,6 +56,7 @@ export const experience: Employer[] = [
       },
       {
         title: 'SDE2',
+        lead: 'Scaled VideoKYC from 1K to 100K+ users a day.',
         period: 'Jan 2022 to Mar 2024',
         points: [
           'Scaled the VideoKYC system from 1K to 100K+ users a day using WebSockets.',
@@ -58,6 +66,7 @@ export const experience: Employer[] = [
       },
       {
         title: 'SDE1',
+        lead: 'Conversion above 90%, infrastructure cost cut by half.',
         period: 'Jan to Dec 2021',
         points: [
           'Raised conversion from under 70% to over 90%.',
@@ -87,4 +96,11 @@ export const skills = [
   { name: 'cloud', items: 'AWS' },
   { name: 'frontend', items: 'React, Next.js' },
   { name: 'ai', items: 'OpenAI APIs, voice AI, tool calling, agentic workflows, LLM evaluation' },
+];
+
+export const stats = [
+  { value: '100K+', label: 'users a day on the VideoKYC system I scaled' },
+  { value: '100M+', label: 'events a day through an in-house ETL platform' },
+  { value: '30-40%', label: 'lower mean time to resolution with LLM support automation' },
+  { value: '10+', label: 'security audits, including RBI and ISO 27018' },
 ];
