@@ -3,7 +3,7 @@ export const site = {
   handle: 'ankan',
   url: 'https://ankan17.github.io',
   headline: 'Senior full-stack engineer building AI products.',
-  now: 'Deployed Engineer at Avoca, building AI voice and text agents. Five years at HyperVerge before that. Bangalore, India.',
+  now: 'I design systems that hold up at scale. Now a Deployed Engineer at Avoca, building AI voice and text agents. Before that, five years at HyperVerge building VideoKYC and its data platform, and leading the team behind it.',
   description:
     'Ankan Poddar is a senior full-stack engineer building AI products. Deployed Engineer at Avoca, previously Engineering Manager at HyperVerge.',
   location: 'Bangalore, India',
