@@ -1,7 +1,7 @@
 export const site = {
   name: 'Ankan Poddar',
   handle: 'ankan',
-  url: 'https://ankan17.github.io',
+  url: 'https://ankanpoddar.dev',
   headline: 'Senior full-stack engineer building AI products.',
   now: 'I design systems that hold up at scale. At Avoca, I build AI voice and text agents. Before that, I spent five years at HyperVerge building VideoKYC and its data platform, and leading the team behind them.',
   description:

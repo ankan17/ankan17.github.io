@@ -1,8 +1,8 @@
-# ankan17.github.io
+# ankanpoddar.dev
 
 Personal site of Ankan Poddar, a senior full-stack engineer who builds AI products.
 
-**Live:** https://ankan17.github.io
+**Live:** https://ankanpoddar.dev (repo: `ankan17/ankan17.github.io`)
 
 Built with [Astro](https://astro.build) as a static site and deployed to GitHub Pages.
 
