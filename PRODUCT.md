@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Astro, statically generated, deployed to GitHub Pages at https://ankan17.github.io (the existing `ankan17/ankan17.github.io` repo). Content lives in Markdown/data files so updating a role or project is a content edit, not a code change. The Angular 6 site in `src/` is being replaced entirely; it cannot build on current Node.
+Astro, statically generated, deployed to GitHub Pages at https://ankanpoddar.dev (custom domain on the existing `ankan17/ankan17.github.io` repo). Content lives in Markdown/data files so updating a role or project is a content edit, not a code change. The Angular 6 site in `src/` is being replaced entirely; it cannot build on current Node.
 
 ## Users
 
@@ -53,7 +53,7 @@ Headline framing (confirmed): **senior full-stack engineer building AI products*
 
 ## Brand Commitments
 
-- Name: Ankan Poddar. Domain: ankan17.github.io. GitHub handle: ankan17.
+- Name: Ankan Poddar. Domain: ankanpoddar.dev (DNS on Cloudflare; ankan17.github.io redirects). GitHub handle: ankan17.
 - Voice: plain, specific, outcome-led (numbers from the résumé, not adjectives). First person.
 - No self-rated skill bars or percentage skills.
 
